@@ -25,13 +25,12 @@ namespace BaseModels
         private DepartmentType _departmentType;
 
         public void Complete()
-        {
-            _isDone = true;
-        }
+            => _isDone = true;
 
         public string GetDescription()
-        {
-            return _description;
-        }
+            => _description;
+        
+        public GameType GetGameType()
+            => _gameType;
     }
 }
