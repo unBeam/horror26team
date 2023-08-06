@@ -1,4 +1,4 @@
-﻿namespace BaseModels
+﻿namespace Enums
 {
     public enum GameType
     {

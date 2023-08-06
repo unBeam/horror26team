@@ -1,5 +1,7 @@
 ﻿using System;
 using BaseModels;
+using Enums;
+using ScriptableObjects;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
