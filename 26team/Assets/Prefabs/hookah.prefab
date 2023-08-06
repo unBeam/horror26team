@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3733864782965236729}
   - component: {fileID: 2286896038785998252}
   - component: {fileID: 1686064422399486983}
+  - component: {fileID: 6326232391970109156}
+  - component: {fileID: -6524364356998678608}
   m_Layer: 0
   m_Name: hookah
   m_TagString: Untagged
@@ -83,3 +85,42 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6326232391970109156
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7513968466527757068}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.4879811, y: 1.94404, z: 1.2352811}
+  m_Center: {x: 0.03764251, y: 0.027979998, z: 0.25339052}
+--- !u!114 &-6524364356998678608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7513968466527757068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb305eee3424ac0aafd73643fa45b0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: hookah
+  _affectedDepartments: 02000000
+  _effects:
+  - _type: 0
+    _value: 0
+    _timeSeconds: 0
