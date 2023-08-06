@@ -2,6 +2,9 @@
 {
     public enum DepartmentType
     {
-        GameDesigners, Devs, Designers
+        GameDesigners,
+        Devs,
+        Designers,
+        ProjectManagers
     }
 }
