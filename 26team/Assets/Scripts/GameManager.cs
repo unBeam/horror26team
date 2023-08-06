@@ -7,10 +7,12 @@ using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
-    private TechnicalAssignment _technicalAssignment;
+    public TechnicalAssignment TechnicalAssignment { get; private set; }
     [SerializeField]
     private TaskPoolSO _taskPool;
 
+    public static GameManager Instance;
+    
     private void Awake()
     {
         if (!(_taskPool.Tasks?.Count > 0))
@@ -19,7 +21,9 @@ public class GameManager : MonoBehaviour
         var gameType = GetRandomGameType();
 
         var tasksByGameType = _taskPool.Tasks.FindAll(task => task.GetGameType() == gameType);
-        _technicalAssignment = new TechnicalAssignment(tasksByGameType);
+        TechnicalAssignment = new TechnicalAssignment(tasksByGameType);
+
+        Instance = this;
     }
 
     private static GameType GetRandomGameType()

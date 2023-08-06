@@ -7,8 +7,11 @@ namespace BaseModels
     public abstract class Character : MonoBehaviour
     {
         [SerializeField] protected DepartmentType _departmentType;
+        public DepartmentType DepartmentType => _departmentType;
         protected List<Effect> _appliedEffects = new List<Effect>();
         [SerializeField] protected int _speed;
+        protected List<Item> _inventory = new List<Item>();
+
 
         public virtual bool CanUseItem(Item item)
         {
