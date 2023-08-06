@@ -7,6 +7,8 @@ namespace UI
     public class UiController : MonoBehaviour
     {
         [SerializeField] private DepartmentDialogue _departmentDialogue;
+        public ItemLog ItemLog;
+        
         public static UiController Instance;
 
         private View _currentlyOpened;

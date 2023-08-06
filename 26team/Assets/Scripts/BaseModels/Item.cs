@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Enums;
+using UI;
 using UnityEngine;
 
 namespace BaseModels
@@ -30,6 +31,7 @@ namespace BaseModels
                 character.TakeItem(this);
                 //TODO: play disappear animation
                 this.gameObject.SetActive(false);
+                UiController.Instance.ItemLog.LogItem(_name);
             }
         }
 
