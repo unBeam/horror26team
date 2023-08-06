@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Enums;
 using UI;
 using UnityEngine;
 
@@ -7,8 +8,6 @@ namespace BaseModels
 {
     public class Player : Character
     {
-        private List<Item> _inventory = new List<Item>();
-
         public override void TakeItem(Item item)
         {
             Debug.Log($"Player took item {item.Name}");
@@ -17,6 +16,11 @@ namespace BaseModels
             {
                 //TODO: show use dialogue. (Player can use item or give it to department)
             }
+        }
+
+        public List<Item> GetItemsOfType(DepartmentType type)
+        {
+            return _inventory.FindAll(x => x.AffectedDepartments.Contains(type));
         }
 
         protected override void HandleEffect(Effect effect)
